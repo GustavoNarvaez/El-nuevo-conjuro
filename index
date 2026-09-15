@@ -1,1 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen con enlace a YouTube</title>
+</head>
+<body>
+
+    <a href="https://www.youtube.com/watch?v=qcR1KbbhRTs&list=RDYZkKF_4XU4o&index=3" target="_blank">
+        <img src="117721914_3524966407534048_4765637899328162814_n.jpg" 
+             alt="Ver video en YouTube">
+    </a>
+
+</body>
+</html>
 
