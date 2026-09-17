@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>YOH — Revista</title>
+    <title>Felipe G. Patiño | Escritor</title>
+
+    <meta name="description" content="Página oficial del escritor Felipe G. Patiño. Literatura, narrativa, poesía y escritos personales.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
+
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
@@ -16,385 +26,748 @@
         }
 
         body {
-            margin: 0;
-            background: #f5efff;
-            color: #24112f;
-            font-family: Georgia, "Times New Roman", serif;
-            line-height: 1.5;
+            background: #f4f1eb;
+            color: #222;
+            font-family: "Libre Baskerville", Georgia, serif;
+            line-height: 1.8;
         }
 
-        /* BARRA SUPERIOR */
+        /* =========================
+           NAVEGACIÓN
+        ========================= */
 
-        header {
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            padding: 25px 7%;
+            z-index: 1000;
+
+            background: rgba(20, 20, 20, 0.94);
+            backdrop-filter: blur(10px);
+
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
 
-            background: #ffffff;
-            border-bottom: 1px solid #ddd0ea;
-        }
-
-        .logo {
-            font-size: 22px;
-            font-weight: bold;
-            letter-spacing: 3px;
-            color: #5b21b6;
+            padding: 17px 20px;
         }
 
         nav a {
-            margin-left: 25px;
-            color: #4c1d95;
+            color: #eee;
             text-decoration: none;
-            font-family: Arial, sans-serif;
-            font-size: 14px;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            margin: 0 18px;
+
+            transition: color 0.3s ease;
         }
 
         nav a:hover {
-            color: #a855f7;
+            color: #c9a86a;
         }
 
-        /* CONTENIDO */
+        /* =========================
+           PORTADA
+        ========================= */
 
-        main {
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 80px 30px;
-        }
+        .hero {
+            min-height: 100vh;
 
-        .titulo {
-            font-size: 58px;
-            margin: 0;
-            color: #4c1d95;
-            letter-spacing: -2px;
-        }
-
-        .autor {
-            margin-top: 5px;
-            margin-bottom: 55px;
-            font-size: 20px;
-            font-style: italic;
-            color: #6b4a7d;
-        }
-
-        /* IMAGEN */
-
-        .imagen-contenedor {
-            text-align: center;
-            margin-bottom: 55px;
-        }
-
-        .imagen-contenedor img {
-            width: 100%;
-            max-width: 600px;
-            border-radius: 4px;
-
-            box-shadow:
-                0 20px 50px rgba(76, 29, 149, 0.18);
-
-            transition: 0.4s ease;
-        }
-
-        .imagen-contenedor img:hover {
-            transform: scale(1.015);
-        }
-
-        /* TEXTO */
-
-        .poema {
-            font-size: 21px;
-            line-height: 1.8;
-            margin-bottom: 70px;
-
-            white-space: pre-line;
-        }
-
-        .poema .destacado {
-            color: #7e22ce;
-            font-style: italic;
-        }
-
-        /* SEPARADOR */
-
-        .separador {
-            width: 70px;
-            height: 2px;
-            background: #8b5cf6;
-            margin: 50px 0;
-        }
-
-        /* BIOGRAFÍA */
-
-        .biografia {
-            font-family: Arial, sans-serif;
-            font-size: 15px;
-            line-height: 1.7;
-            color: #5b4864;
-            margin-bottom: 45px;
-        }
-
-        .biografia strong {
-            color: #4c1d95;
-        }
-
-        /* BOTONES */
-
-        .botones {
             display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 30px;
+            align-items: center;
+            justify-content: center;
+
+            padding: 120px 30px 80px;
+
+            background:
+                linear-gradient(
+                    rgba(20,20,20,0.72),
+                    rgba(20,20,20,0.72)
+                ),
+                url("lol.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            color: white;
         }
 
-        .boton {
-            display: inline-block;
-            padding: 13px 24px;
+        .hero-content {
+            max-width: 900px;
+            text-align: center;
+        }
 
-            border-radius: 30px;
+        .hero h1 {
+            font-size: clamp(45px, 8vw, 90px);
+            font-weight: 400;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        .hero .subtitle {
+            font-family: "Montserrat", sans-serif;
+            font-size: 15px;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: #d6bd8b;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: 35px auto 0;
+
+            font-size: 17px;
+            color: #e4e4e4;
+        }
+
+        .button {
+            display: inline-block;
+
+            margin-top: 35px;
+            padding: 13px 28px;
+
+            border: 1px solid #c9a86a;
+
+            color: white;
             text-decoration: none;
 
-            font-family: Arial, sans-serif;
+            font-family: "Montserrat", sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background: #c9a86a;
+            color: #111;
+        }
+
+        /* =========================
+           SECCIONES
+        ========================= */
+
+        section {
+            padding: 100px 25px;
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title span {
+            font-family: "Montserrat", sans-serif;
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #a2834d;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            font-weight: 400;
+            margin-top: 10px;
+        }
+
+        /* =========================
+           SOBRE EL AUTOR
+        ========================= */
+
+        #sobre-mi {
+            background: #fff;
+        }
+
+        .author {
+            display: grid;
+            grid-template-columns: 330px 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .author-photo {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+
+            object-fit: cover;
+
+            filter: grayscale(15%);
+
+            box-shadow:
+                15px 15px 0 #c9a86a;
+        }
+
+        .author-text h3 {
+            font-size: 30px;
+            font-weight: 400;
+            margin-bottom: 25px;
+        }
+
+        .author-text p {
+            margin-bottom: 18px;
+            color: #444;
+        }
+
+        /* =========================
+           ESCRITOS
+        ========================= */
+
+        #escritos {
+            background: #eeeae2;
+        }
+
+        .works {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .work {
+            background: #fff;
+            padding: 35px;
+
+            border-top: 3px solid #c9a86a;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .work:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 15px 30px rgba(0,0,0,0.08);
+        }
+
+        .work small {
+            font-family: "Montserrat", sans-serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #9a7a43;
+        }
+
+        .work h3 {
+            margin: 15px 0;
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+        .work p {
             font-size: 14px;
-            font-weight: bold;
-
-            transition: 0.3s ease;
+            color: #555;
+            margin-bottom: 25px;
         }
 
-        .youtube {
-            background: #ff0000;
+        .read {
+            font-family: "Montserrat", sans-serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            color: #222;
+            text-decoration: none;
+
+            border-bottom: 1px solid #c9a86a;
+            padding-bottom: 4px;
+        }
+
+        .read:hover {
+            color: #a2834d;
+        }
+
+        /* =========================
+           FRAGMENTO
+        ========================= */
+
+        .quote-section {
+            background: #1d1d1d;
+            color: white;
+            text-align: center;
+        }
+
+        .quote {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .quote-mark {
+            font-size: 70px;
+            color: #c9a86a;
+            line-height: 0.5;
+        }
+
+        .quote p {
+            font-size: 25px;
+            font-style: italic;
+            margin: 30px 0;
+        }
+
+        .quote span {
+            font-family: "Montserrat", sans-serif;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #aaa;
+        }
+
+        /* =========================
+           CONTACTO
+        ========================= */
+
+        #contacto {
+            background: #fff;
+            text-align: center;
+        }
+
+        .contact-text {
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .contact-text p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .contact-links {
+            margin-top: 35px;
+        }
+
+        .contact-links a {
+            display: inline-block;
+
+            margin: 8px;
+            padding: 12px 22px;
+
+            border: 1px solid #222;
+
+            color: #222;
+            text-decoration: none;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            transition: all 0.3s ease;
+        }
+
+        .contact-links a:hover {
+            background: #222;
             color: white;
         }
 
-        .youtube:hover {
-            background: #cc0000;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(255, 0, 0, 0.25);
-        }
-
-        .volver {
-            background: #6d28d9;
-            color: white;
-        }
-
-        .volver:hover {
-            background: #5b21b6;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(109, 40, 217, 0.25);
-        }
-
-        /* PIE */
+        /* =========================
+           PIE
+        ========================= */
 
         footer {
-            border-top: 1px solid #ddd0ea;
-            padding: 30px 7%;
+            background: #151515;
+            color: #999;
+
             text-align: center;
 
-            font-family: Arial, sans-serif;
-            font-size: 13px;
-            color: #80698c;
+            padding: 35px 20px;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 11px;
+            letter-spacing: 1px;
         }
 
-        /* CELULAR */
+        footer strong {
+            color: #ddd;
+            font-weight: 400;
+        }
 
-        @media (max-width: 600px) {
+        /* =========================
+           RESPONSIVE
+        ========================= */
 
-            header {
-                padding: 20px;
-                display: block;
-            }
+        @media (max-width: 800px) {
 
             nav {
-                margin-top: 15px;
+                flex-wrap: wrap;
             }
 
             nav a {
-                margin-left: 0;
-                margin-right: 18px;
+                margin: 5px 9px;
+                font-size: 10px;
             }
 
-            main {
-                padding: 55px 22px;
+            .author {
+                grid-template-columns: 1fr;
+                gap: 45px;
             }
 
-            .titulo {
-                font-size: 45px;
+            .author-photo {
+                max-width: 320px;
+                margin: auto;
             }
 
-            .poema {
-                font-size: 19px;
+            .works {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 34px;
+            }
+
+            .quote p {
+                font-size: 20px;
             }
         }
+
     </style>
 </head>
 
 <body>
 
-    <!-- MENÚ -->
+    <!-- =========================
+         MENÚ
+    ========================= -->
 
-    <header>
-        <div class="logo">MONOCICLO</div>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#escritos">Escritos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
 
-        <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Revista</a>
-            <a href="#">Contacto</a>
-        </nav>
+
+    <!-- =========================
+         PORTADA
+    ========================= -->
+
+    <header class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <div class="subtitle">
+                Escritor · Narrador · Autor
+            </div>
+
+            <h1>Felipe G. Patiño</h1>
+
+            <p>
+                Palabras escritas desde el camino, la memoria,
+                la experiencia y aquello que permanece cuando
+                todo lo demás desaparece.
+            </p>
+
+            <a class="button" href="#escritos">
+                Leer mis escritos
+            </a>
+
+        </div>
+
     </header>
 
 
-    <!-- ARTÍCULO -->
+    <!-- =========================
+         SOBRE EL AUTOR
+    ========================= -->
 
-    <main>
+    <section id="sobre-mi">
 
-        <h1 class="titulo">YOH</h1>
+        <div class="container">
 
-        <div class="autor">
-            Gerardo Szae*
-        </div>
+            <div class="section-title">
+
+                <span>El autor</span>
+
+                <h2>Sobre mí</h2>
+
+            </div>
 
 
-        <!-- IMAGEN -->
-
-        <div class="imagen-contenedor">
-
-            <a
-                href="https://www.youtube.com/watch?v=qcR1KbbhRTs&list=RDYZkKF_4XU4o&index=3"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
+            <div class="author">
 
                 <img
-                    src="117721914_3524966407534048_4765637899328162814_n.jpg"
-                    alt="Imagen de YOH"
+                    src="lol.jpg"
+                    alt="Felipe G. Patiño"
+                    class="author-photo"
                 >
 
-            </a>
+
+                <div class="author-text">
+
+                    <h3>Felipe G. Patiño</h3>
+
+                    <p>
+                        Soy escritor y narrador. Mi literatura nace
+                        de la experiencia, del viaje, de la memoria
+                        y de las personas que aparecen y desaparecen
+                        en el camino.
+                    </p>
+
+                    <p>
+                        Escribo sobre aquello que difícilmente puede
+                        explicarse de otra manera: los encuentros,
+                        las pérdidas, la libertad, la soledad,
+                        el deseo y la búsqueda de sentido.
+                    </p>
+
+                    <p>
+                        Este espacio reúne algunos de mis escritos,
+                        proyectos literarios y fragmentos.
+                    </p>
+
+                </div>
+
+            </div>
 
         </div>
 
+    </section>
 
-        <!-- TEXTO DE EJEMPLO -->
 
-        <div class="poema">
+    <!-- =========================
+         ESCRITOS
+    ========================= -->
 
-            <span class="destacado">
-            Deslizas tu lengua sobre
-            el paisaje recién
-            forjado con
-            la yerba.
+    <section id="escritos">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Obra</span>
+
+                <h2>Mis escritos</h2>
+
+            </div>
+
+
+            <div class="works">
+
+
+                <!-- ESCRITO 1 -->
+
+                <article class="work">
+
+                    <small>Narrativa</small>
+
+                    <h3>El camino</h3>
+
+                    <p>
+                        Un viaje que comienza sin saber exactamente
+                        hacia dónde conduce y termina convirtiéndose
+                        en una búsqueda interior.
+                    </p>
+
+                    <a href="#" class="read">
+                        Leer escrito →
+                    </a>
+
+                </article>
+
+
+                <!-- ESCRITO 2 -->
+
+                <article class="work">
+
+                    <small>Memoria</small>
+
+                    <h3>Los días perdidos</h3>
+
+                    <p>
+                        Fragmentos de memoria, lugares y personas
+                        que permanecen en nosotros mucho después
+                        de haber desaparecido.
+                    </p>
+
+                    <a href="#" class="read">
+                        Leer escrito →
+                    </a>
+
+                </article>
+
+
+                <!-- ESCRITO 3 -->
+
+                <article class="work">
+
+                    <small>Literatura</small>
+
+                    <h3>El último viaje</h3>
+
+                    <p>
+                        Una historia sobre el movimiento, la libertad
+                        y esa extraña necesidad humana de abandonar
+                        lo conocido.
+                    </p>
+
+                    <a href="#" class="read">
+                        Leer escrito →
+                    </a>
+
+                </article>
+
+
+                <!-- ESCRITO 4 -->
+
+                <article class="work">
+
+                    <small>Poesía</small>
+
+                    <h3>Fragmentos</h3>
+
+                    <p>
+                        Pequeñas piezas escritas entre la noche,
+                        la ciudad y el silencio.
+                    </p>
+
+                    <a href="#" class="read">
+                        Leer escrito →
+                    </a>
+
+                </article>
+
+
+                <!-- ESCRITO 5 -->
+
+                <article class="work">
+
+                    <small>Crónica</small>
+
+                    <h3>Desde el camino</h3>
+
+                    <p>
+                        Apuntes de viaje y encuentros con personas
+                        que dejaron una marca inesperada.
+                    </p>
+
+                    <a href="#" class="read">
+                        Leer escrito →
+                    </a>
+
+                </article>
+
+
+                <!-- ESCRITO 6 -->
+
+                <article class="work">
+
+                    <small>Próximamente</small>
+
+                    <h3>Nuevos textos</h3>
+
+                    <p>
+                        Este espacio irá creciendo con nuevos cuentos,
+                        poemas, crónicas y textos personales.
+                    </p>
+
+                    <a href="#contacto" class="read">
+                        Mantente cerca →
+                    </a>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FRAGMENTO LITERARIO
+    ========================= -->
+
+    <section class="quote-section">
+
+        <div class="quote">
+
+            <div class="quote-mark">“</div>
+
+            <p>
+                A veces uno no escribe para contar lo que ocurrió,
+                sino para descubrir qué fue lo que realmente ocurrió.
+            </p>
+
+            <span>
+                Felipe G. Patiño
             </span>
 
-            <br>
+        </div>
 
-            you saw it
-            spinning over
-            the hill
+    </section>
 
-            <br><br>
 
-            & le prendes
-            fuego.
+    <!-- =========================
+         CONTACTO
+    ========================= -->
 
-            <br>
+    <section id="contacto">
 
-            Your peak is
-            on la Bufa
+        <div class="container">
 
-            <br><br>
+            <div class="section-title">
 
-            Hey/
+                <span>Contacto</span>
 
-            una parte mía
-            continúa en Silao
-            admirando desde la azotea
+                <h2>Escríbeme</h2>
 
-            <br><br>
+            </div>
 
-            la forma del
-            humo que vomitas
 
-            <br>
+            <div class="contact-text">
 
-            sin gatillo/
+                <p>
+                    Para colaboraciones, proyectos literarios,
+                    publicaciones o simplemente para ponerse
+                    en contacto conmigo.
+                </p>
 
-            <br><br>
 
-            howl at me
-            from there/
+                <div class="contact-links">
 
-            <br>
+                    <a href="mailto:felipedejesusgarciapatino@gmail.com">
+                        Email
+                    </a>
 
-            tell me
-            what kind of
-            pixies son
+                    <a
+                        href="https://medium.com/@felipedejesusgarciapatino/about"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Medium
+                    </a>
 
-            <br><br>
+                </div>
 
-            los que
-            se acurrucan
-
-            <br>
-
-            en tus caries
-            de pulmón.
+            </div>
 
         </div>
 
-
-        <div class="separador"></div>
-
-
-        <!-- BIOGRAFÍA -->
-
-        <div class="biografia">
-
-            <strong>*Poeta en dislocación hippie.</strong>
-
-            <br><br>
-
-            A veces estudiante. De la poesía su principal
-            interés radica en la experimentación melódica
-            y visual que pueda detonarse durante el proceso.
-
-            <br><br>
-
-            Esta página presenta una pieza experimental
-            dentro de una revista literaria digital.
-
-        </div>
+    </section>
 
 
-        <!-- BOTONES -->
-
-        <div class="botones">
-
-            <a
-                class="boton youtube"
-                href="https://www.youtube.com/watch?v=qcR1KbbhRTs&list=RDYZkKF_4XU4o&index=3"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                ▶ Escuchar en YouTube
-            </a>
-
-            <a
-                class="boton volver"
-                href="#"
-            >
-                ← Volver
-            </a>
-
-        </div>
-
-    </main>
-
-
-    <!-- PIE DE PÁGINA -->
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
     <footer>
-        Revista literaria · 2026
+
+        © 2026
+        <strong>Felipe G. Patiño</strong>
+        · Todos los derechos reservados.
+
     </footer>
+
 
 </body>
 </html>
